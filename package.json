@@ -1,6 +1,6 @@
 {
-  "name": "Language Swig (JS Templates)",
-  "version": "0.1.0",
+  "name": "language-html-swig",
+  "version": "0.0.0",
   "description": "Javascript templating-language. This is the conversion of the original Swig.tmbundle.",
   "repository": "https://github.com/screeny05/language-html-swig.git",
   "license": "MIT",
