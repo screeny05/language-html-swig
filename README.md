@@ -3,6 +3,9 @@
 This is a conversion of the original [Swig.tmbundle](https://github.com/paularmstrong/Swig.tmbundle).
 It also includes all the snippets of the original.
 
+## Preview
+![Preview](https://raw.githubusercontent.com/screeny05/language-html-swig/master/preview.png)
+
 ## License
 Copyright (c) 2011 Paul Armstrong, Paul Armstrong Designs
 
