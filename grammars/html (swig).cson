@@ -56,7 +56,7 @@
     'name': 'meta.scope.swig.template.tag'
     'patterns': [
       {
-        'match': '\\b(extends|block|endblock|parent|include|import|for|empty|endfor|if|else|elseif|endif|autoescape|endautoescape|set|macro)\\b'
+        'match': '\\b(extends|block|endblock|parent|include|import|for|empty|endfor|if|else|elseif|endif|autoescape|endautoescape|set|macro|endmacro)\\b'
         'name': 'keyword.control.swig.template'
       }
       {
