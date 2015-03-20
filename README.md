@@ -6,6 +6,12 @@ It also includes all the snippets of the original.
 ## Preview
 ![Preview](https://raw.githubusercontent.com/screeny05/language-html-swig/master/preview.png)
 
+## Contributors
+Thanks to all the awesome Contributors improving this package!
+If you want to help, too, just submit a pull-request.
+
+A full list of contributors can be found [here](https://github.com/screeny05/language-html-swig/graphs/contributors).
+
 ## License
 Copyright (c) 2011 Paul Armstrong, Paul Armstrong Designs
 
