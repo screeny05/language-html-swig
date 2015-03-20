@@ -38,3 +38,6 @@
   'block':
     'prefix': 'block'
     'body': '{% block ${1:blockname} %}\n    $0\n{% endblock %}'
+  'comment':
+    'prefix': '<!'
+    'body': '<!-- $1 -->'
