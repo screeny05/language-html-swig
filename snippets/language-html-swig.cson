@@ -1,43 +1,71 @@
-'.text.html.swig':
-  'autoescape':
-    'prefix': 'autoescape'
-    'body': '{% autoescape ${2:on}${3: "${4:js}"} %}\n\t$0\n{% endautoescape %}'
-  'else':
-    'prefix': 'else'
-    'body': '{% else %}'
-  'extends':
-    'prefix': 'extends'
-    'body': '{% extends "${1:file}" %}'
-  'filter':
-    'prefix': 'filter'
-    'body': '{% filter ${1:filtername}${2: ${3:args}} %}\n    $0\n{% endfilter %}'
-  'for':
-    'prefix': 'for'
-    'body': '{% for ${1:foo} in ${2:bar} %}\n    $0\n{% endfor %}'
-  'if':
-    'prefix': 'if'
-    'body': '{% if ${1:condition} %}\n    $0\n{% endif %}'
-  'import':
-    'prefix': 'import'
-    'body': '{% import "${1:file}" as ${2:varname} %}'
-  'include':
-    'prefix': 'include'
-    'body': '{% include "${1:file}" ${2:with ${3:context}${4: only}} %}'
-  'macro':
-    'prefix': 'macro'
-    'body': '{% macro ${1:name} ${2:args} %}\n\t$0\n{% endmacro %}'
-  'parent':
-    'prefix': 'parent'
-    'body': '{% parent %}'
-  'set':
-    'prefix': 'set'
-    'body': '{% set ${1:name} = ${2:value} %}'
-  'tag':
-    'prefix': 'tag'
-    'body': '{% ${1:tag} %}\n\t$0\n{% end$1 %}'
-  'block':
-    'prefix': 'block'
-    'body': '{% block ${1:blockname} %}\n    $0\n{% endblock %}'
-  'comment':
-    'prefix': '<!'
-    'body': '<!-- $1 -->'
+".text.html.swig":
+  autoescape:
+    prefix: "autoescape"
+    body: '''
+      {% autoescape ${2:on}${3: "${4:js}"} %}
+      	$0
+      {% endautoescape %}
+    '''
+  else:
+    prefix: "else"
+    body: "{% else %}"
+  extends:
+    prefix: "extends"
+    body: "{% extends \"${1:file}\" %}"
+  filter:
+    prefix: "filter"
+    body: '''
+      {% filter ${1:filtername}${2: ${3:args}} %}
+          $0
+      {% endfilter %}
+    '''
+  for:
+    prefix: "for"
+    body: '''
+      {% for ${1:foo} in ${2:bar} %}
+          $0
+      {% endfor %}
+    '''
+  if:
+    prefix: "if"
+    body: '''
+      {% if ${1:condition} %}
+          $0
+      {% endif %}
+    '''
+  import:
+    prefix: "import"
+    body: "{% import \"${1:file}\" as ${2:varname} %}"
+  include:
+    prefix: "include"
+    body: "{% include \"${1:file}\" ${2:with ${3:context}${4: only}} %}"
+  macro:
+    prefix: "macro"
+    body: '''
+      {% macro ${1:name} ${2:args} %}
+      	$0
+      {% endmacro %}
+    '''
+  parent:
+    prefix: "parent"
+    body: "{% parent %}"
+  set:
+    prefix: "set"
+    body: "{% set ${1:name} = ${2:value} %}"
+  tag:
+    prefix: "tag"
+    body: '''
+      {% ${1:tag} %}
+      	$0
+      {% end$1 %}
+    '''
+  block:
+    prefix: "block"
+    body: '''
+      {% block ${1:blockname} %}
+          $0
+      {% endblock %}
+    '''
+  comment:
+    prefix: "<!"
+    body: "<!-- $1 -->"

@@ -1,88 +1,88 @@
-'fileTypes': [
-  'swig'
+fileTypes: [
+  "swig"
 ]
-'foldingStartMarker': '{% (block|if|for|macro|autoescape)'
-'foldingStopMarker': '{% (endblock|endif|endfor|endmacro|endautoescape) %}'
-'name': 'HTML (Swig)'
-'patterns': [
+foldingStartMarker: "{% (block|if|for|macro|autoescape)"
+foldingStopMarker: "{% (endblock|endif|endfor|endmacro|endautoescape) %}"
+name: "HTML (Swig)"
+patterns: [
   {
-    'comment': 'Since html is valid in Swig templates include the html patterns'
-    'include': 'text.html.basic'
+    comment: "Since html is valid in Swig templates include the html patterns"
+    include: "text.html.basic"
   }
   {
-    'begin': '{#'
-    'end': '#}'
-    'name': 'comment.line.swig'
+    begin: "{#"
+    end: "#}"
+    name: "comment.line.swig"
   }
   {
-    'begin': '\\$[a-z_\\.]+'
-    'end': ''
-    'name': 'variable.other.swig'
+    begin: "\\$[a-z_\\.]+"
+    end: ""
+    name: "variable.other.swig"
   }
   {
-    'begin': '{{'
-    'captures':
-      '1':
-        'name': 'entity.other.swig.tagbraces'
-    'end': '}}'
-    'name': 'variable.other.swig'
-    'patterns': [
+    begin: "{{"
+    captures:
+      "1":
+        name: "entity.other.swig.tagbraces"
+    end: "}}"
+    name: "variable.other.swig"
+    patterns: [
       {
-        'match': '\\|(\\s?)([^\\( ]+)\\b'
-        'name': 'support.function.filter.swig'
+        match: "\\|(\\s?)([^\\( ]+)\\b"
+        name: "support.function.filter.swig"
       }
       {
-        'begin': '\''
-        'end': '\''
-        'name': 'string.other.swig.template.tag'
+        begin: "'"
+        end: "'"
+        name: "string.other.swig.template.tag"
       }
       {
-        'begin': '"'
-        'end': '"'
-        'name': 'string.other.swig.template.tag'
+        begin: "\""
+        end: "\""
+        name: "string.other.swig.template.tag"
       }
       {
-        'match': '[a-zA-Z_]+'
-        'name': 'string.unquoted.swig.template.tag'
+        match: "[a-zA-Z_]+"
+        name: "string.unquoted.swig.template.tag"
       }
     ]
   }
   {
-    'begin': '{%'
-    'captures':
-      '1':
-        'name': 'entity.other.swig.tagbraces'
-    'end': '%}'
-    'name': 'meta.scope.swig.template.tag'
-    'patterns': [
+    begin: "{%"
+    captures:
+      "1":
+        name: "entity.other.swig.tagbraces"
+    end: "%}"
+    name: "meta.scope.swig.template.tag"
+    patterns: [
       {
-        'match': '\\b(extends|block|endblock|parent|include|import|for|empty|endfor|if|else|elseif|endif|autoescape|endautoescape|set|macro|endmacro)\\b'
-        'name': 'keyword.control.swig.template'
+        match: "\\b(extends|block|endblock|parent|include|import|for|empty|endfor|if|else|elseif|endif|autoescape|endautoescape|set|macro|endmacro)\\b"
+        name: "keyword.control.swig.template"
       }
       {
-        'match': '\\b(and|or|not|in)\\b'
-        'name': 'keyword.operator.twig.template'
+        match: "\\b(and|or|not|in)\\b"
+        name: "keyword.operator.twig.template"
       }
       {
-        'begin': '\''
-        'end': '\''
-        'name': 'string.other.twig.template.tag'
+        begin: "'"
+        end: "'"
+        name: "string.other.twig.template.tag"
       }
       {
-        'begin': '"'
-        'end': '"'
-        'name': 'string.other.twig.template.tag'
+        begin: "\""
+        end: "\""
+        name: "string.other.twig.template.tag"
       }
       {
-        'begin': '{%'
-        'end': '%}'
-        'name': 'string.other.twig.template.tag'
+        begin: "{%"
+        end: "%}"
+        name: "string.other.twig.template.tag"
       }
       {
-        'match': '[a-zA-Z_]+'
-        'name': 'string.unquoted.twig.template.tag'
+        match: "[a-zA-Z_]+"
+        name: "string.unquoted.twig.template.tag"
       }
     ]
   }
 ]
-'scopeName': 'text.html.swig'
+scopeName: "text.html.swig"

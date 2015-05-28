@@ -1,0 +1,6 @@
+".text.html.swig":
+  editor:
+    increaseIndentPattern: "\\{%\\s*(if|for|block|autoescape|macro)"
+    decreaseIndentPattern: "(else|endif|empty|endfor|endblock|endautoescape|endmacro)\\s*%\\}"
+    commentStart: "{# "
+    commentEnd: " #}"
