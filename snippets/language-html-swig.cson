@@ -1,11 +1,7 @@
 ".text.html.swig":
   autoescape:
     prefix: "autoescape"
-    body: '''
-      {% autoescape ${2:on}${3: "${4:js}"} %}
-      	$0
-      {% endautoescape %}
-    '''
+    body: "{% autoescape ${2:on}${3: '${4:js}'} %}\n\t$0\n{% endautoescape %}"
   else:
     prefix: "else"
     body: "{% else %}"
@@ -14,25 +10,13 @@
     body: "{% extends \"${1:file}\" %}"
   filter:
     prefix: "filter"
-    body: '''
-      {% filter ${1:filtername}${2: ${3:args}} %}
-          $0
-      {% endfilter %}
-    '''
+    body: "{% filter ${1:filtername}${2: ${3:args}} %}\n\t$0\n{% endfilter %}"
   for:
     prefix: "for"
-    body: '''
-      {% for ${1:foo} in ${2:bar} %}
-          $0
-      {% endfor %}
-    '''
+    body: "{% for ${1:foo} in ${2:bar} %}\n\t$0\n{% endfor %}"
   if:
     prefix: "if"
-    body: '''
-      {% if ${1:condition} %}
-          $0
-      {% endif %}
-    '''
+    body: "{% if ${1:condition} %}\n\t$0\n{% endif %}"
   import:
     prefix: "import"
     body: "{% import \"${1:file}\" as ${2:varname} %}"
@@ -41,11 +25,7 @@
     body: "{% include \"${1:file}\" ${2:with ${3:context}${4: only}} %}"
   macro:
     prefix: "macro"
-    body: '''
-      {% macro ${1:name} ${2:args} %}
-      	$0
-      {% endmacro %}
-    '''
+    body: "{% macro ${1:name} ${2:args} %}\n\t$0\n{% endmacro %}"
   parent:
     prefix: "parent"
     body: "{% parent %}"
@@ -54,18 +34,10 @@
     body: "{% set ${1:name} = ${2:value} %}"
   tag:
     prefix: "tag"
-    body: '''
-      {% ${1:tag} %}
-      	$0
-      {% end$1 %}
-    '''
+    body: "{% ${1:tag} %}\n\t$0\n{% end$1 %}"
   block:
     prefix: "block"
-    body: '''
-      {% block ${1:blockname} %}
-          $0
-      {% endblock %}
-    '''
+    body: "{% block ${1:blockname} %}\n\t$0\n{% endblock %}"
   comment:
     prefix: "<!"
     body: "<!-- $1 -->"
